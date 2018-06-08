@@ -1,0 +1,393 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  display: block;
+}
+ul,li{
+  list-style: none;
+  margin: 0;
+}
+img{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration: none;
+}
+input{
+  outline: none;
+}
+p{
+  text-align: center;
+  margin: 0;
+}
+.search{
+  width: 10.35rem;
+  height: 1.1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 1.1rem;
+}
+.adress{
+  font-size: 0.45rem;
+  /*width: 1.1rem;*/
+  height: 1.1rem;
+}
+.down-arrow {
+    display :inline-block;
+    position: relative;
+    width: 0.5rem;
+    height: 0.375rem;
+    margin-right: 0.25rem;
+}
+
+.down-arrow::after {
+    display: inline-block;
+    content: " ";
+    height: 0.225rem;
+    width: 0.225rem;
+    border-width: 0 0.025rem 0.025rem 0;
+    border-color: #282828;
+    border-style: solid;
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform-origin: center;
+    transition: transform .3s;
+    position: absolute;
+    top: 50%;
+    right: 0.125rem;
+    margin-top: -0.125rem;
+}
+/*// 加上active旋转成 上箭头*/
+.down-arrow.active::after {
+    transform-origin: center;
+    transform: rotate(-135deg);
+    transition: transform .3s;
+}
+.search>input{
+  width: 8rem;
+  height: 0.68rem;
+  border: 0.025rem solid #dbdbdb;
+  border-radius: 0.1rem;
+  text-align: center;
+  background: url("../images/search.png") no-repeat 2.5rem center;
+}
+
+
+.top-banner{
+  width: 10.35rem;
+  height: 3.625rem;
+  margin-top: 0.025rem;
+}
+.top-banner>img{
+  width: 10.35rem;
+  height: 3.625rem;
+  margin:0 auto;
+}
+
+.Hot-spots{
+  width: 10.35rem;
+
+}
+
+.Hot-spots>p:first-child{
+  height: 0.85rem;
+  line-height: 0.85rem;
+  font-size: 0.4rem;
+  text-align: left;
+  margin-left: 0.45rem;
+}
+.Hot-spots>ul>li{
+  height: 0.53rem;
+  font-size: 0.35rem;
+  float: left;
+  margin-right: 0.125rem;
+  color: #666666;
+}
+.Hot-spots>ul>li:nth-child(1){
+  color: #56c083;
+  border-bottom: 0.05rem solid #56c083;
+  /* border-size:border-box; */
+}
+.Hot-spots>ul{
+  overflow: hidden;
+  padding: 0;
+  margin-left: 0.45rem;
+  margin-bottom: 0.2rem;
+}
+
+.adress-items{
+  width: 9.675rem;
+  height: 3.625rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.adress-items .items-pic{
+  width: 33.33%;
+  height: 3.625rem;
+}
+
+.items-pic>img{
+  width: 3.025rem;
+  height: 2.575rem;
+  margin: 0 auto;
+}
+.adress-items p{
+  font-size: 0.3rem;
+  color: rgb(102,102,102);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.adress-items>.items-pic>.adress-spe{
+  height: 0.5rem;
+  /* flex: none;
+  width: 33.3%; */
+  font-size: 0.33rem;
+  margin-top: 0.2rem;
+  color: rgb(0, 0, 0);
+}
+.newplay{
+  margin-top: 0.2rem;
+  width: 10.35rem;
+}
+.newplay-title{
+  height: 0.75em;
+  line-height: 0.75rem;
+  width: 9.675rem;
+  margin: 0 auto;
+}
+.newplay-title-fl{
+  float: left;
+  font-family: "PingFang-SC-Medium";
+	font-size: 0.4rem;
+	color: #2a2b2b;
+}
+.newplay-title-fr{
+  float: right;
+  font-family: "PingFang-SC-Bold";
+	font-size: 0.3rem;
+  color: #8f8e93;
+}
+.newplay>img{
+  width: 9.625rem;
+  height: 3.625rem;
+  margin: 0 auto;
+}
+.newplay>.np-text1{
+  font: 400 0.325rem/0.4rem "PingFang-SC-Regular";
+  text-align: left;
+  color: black;
+  margin-top: 0.2rem;
+  margin-left: 0.35rem;
+}
+.np-text2{
+  font: 400 0.3rem/0.4rem "PingFang-SC-Regular";
+  text-align: left;
+  color: rgb(102,102,102);
+  margin-top: 0.2rem;
+  margin-left: 0.35rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.refresh{
+  padding-top: 0.425rem;
+  background: url("../images/arrow-down.png") no-repeat top center;
+  text-align: center;
+  font-family: "STXihei";
+	font-size: 0.2rem;
+	line-height: 0.25rem;
+  color: "#807f7f";
+  margin-top: 0.2rem;
+}
+
+/* 底部开始 */
+.bottom{
+  width: 10.35rem;
+  height: 1.225rem;
+  background: rgba(236,236,236,0.86);
+  position: fixed;
+  bottom: 0;
+  z-index: 8888;
+  
+}
+.bottom>ul{
+  display:flex;
+  justify-content: flex-start;
+  font: 400 0.3rem/0.5rem "STXihei";
+  padding: 0;
+}
+.bottom>ul>li{
+  width: 25%;
+}
+.bottom img{
+  /* width: 0.625rem; */
+  height: 0.6rem;
+  margin: 0 auto;
+  margin-top: 0.1rem;
+}
+.bottom a{
+  color: rgb(136,136,136);
+  /* overflow: hidden; */
+  /*display: inline-block;*/
+}
+.bottom-spe{
+    color: rgb(86,192,131);
+  }
+
+
+
+
+
+
+
+
+
+
+
+.clearfix:after{
+content:"";
+height:0;
+line-height:0;
+display:block;
+clear:both;
+visibility:hidden;
+}
+
+.clearfix{
+ zoom:1;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 320px) {
+    html {
+      font-size: 30.917px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+  @media only screen and (min-width: 360px) {
+    html {
+      font-size: 34.78px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (min-width: 375px) {
+    html {
+      font-size: 36.231px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+  @media only screen and (min-width: 412px) {
+    html {
+      font-size: 39.8px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (min-width: 414px) {
+    html {
+      font-size: 40px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (min-width: 768px) {
+    html {
+      font-size: 74.2px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (min-width: 1024px) {
+    html {
+      font-size: 98.93px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+    @media only screen and (min-width: 411px) {
+    html {
+      font-size: 39.71px !important; 
+      } 
+      body{
+        width: 10.35rem;
+        margin:0 auto;
+      }
+    }
+
+
+
+
+
+
+
+
+
+
+
