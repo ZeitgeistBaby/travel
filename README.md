@@ -1,2 +1,2 @@
 # travel
-website:
+website:https://zeitgeistbaby.github.io/travel/
